@@ -1,6 +1,6 @@
 package modul06;
 
-import java.awt.*;
+import java.awt.BorderLayout;
 import javax.swing.*;
 
 public class tes2 {
@@ -9,13 +9,12 @@ public class tes2 {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(400, 300);
         frame.setLayout(new BorderLayout(10, 10));
-        //membuat button untuk calculator
 
-        frame.add(new JButton("7"), BorderLayout.WEST);
-        
-        
-
-        
+        frame.add(new JButton("NORTH"), BorderLayout.NORTH);
+        frame.add(new JButton("SOUTH"), BorderLayout.SOUTH);
+        frame.add(new JButton("WEST"), BorderLayout.WEST);
+        frame.add(new JButton("EAST"), BorderLayout.EAST);
+        frame.add(new JButton("CENTER"), BorderLayout.CENTER);
 
         frame.setVisible(true);
     }
