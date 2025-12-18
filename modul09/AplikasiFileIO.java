@@ -14,6 +14,7 @@ public class AplikasiFileIO extends JFrame{
     private JButton btnLoadBinary;
     private JFileChooser fileChooser;
     private JButton btnAppendText;
+    private JButton btnTestDB;
     
 
     public AplikasiFileIO() {
@@ -36,6 +37,7 @@ public class AplikasiFileIO extends JFrame{
         btnLoadBinary = new JButton("buka binary");
         // ltihan 4
         btnAppendText = new JButton("tambah text");
+        btnTestDB = new JButton("Test DB");
 
         buttonPanel.add(btnOpenText);
         buttonPanel.add(btnSaveText);
@@ -43,6 +45,7 @@ public class AplikasiFileIO extends JFrame{
         buttonPanel.add(btnLoadBinary);
         // latihan4
         buttonPanel.add(btnAppendText);
+        buttonPanel.add(btnTestDB);
 
         // layout
         add(new JScrollPane(textArea), BorderLayout.CENTER);
@@ -62,12 +65,15 @@ public class AplikasiFileIO extends JFrame{
         // 5. menambahkan
         // latihan4
         btnAppendText.addActionListener(e -> { tambahFileTeks(); });
+       
 
 
         // latihan2
         // Load last_notes.txt otomatis saat aplikasi dibuka
         muatLastNotes();
     }
+
+    
 
     private void bukaFileTeks() {
         if (fileChooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
